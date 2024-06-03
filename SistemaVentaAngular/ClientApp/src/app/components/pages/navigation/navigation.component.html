@@ -1,0 +1,56 @@
+<mat-toolbar color="primary" style="height: 90px;">
+  <mat-toolbar-row>
+    <h1 style="margin-top: 20px;">SISMAY</h1>
+    <button mat-icon-button (click)="drawer.toggle()">
+      <mat-icon style="margin-top: 19px; font-size: 30px;">menu</mat-icon>
+    </button>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="logout-icon" aria-label="Logout" routerLink="/login" (click)="logout()">
+      <mat-icon style="margin-top: 20px;">logout</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer opened="true" mode="side" style="width: 260px; background-color: #345e37;">
+    <mat-nav-list>
+      <img src="./assets/FrutasPNG.png" alt="Imagen de tienda" class="imagen-travel">
+
+      <mat-list-item *ngIf="role === 'Administrador'" routerLink="/pages/dashboard" class="sidenav">
+        <mat-icon mat-list-icon class="color">dashboard</mat-icon>
+        <div mat-line class="color">DashBoard</div>
+      </mat-list-item>
+
+      <mat-list-item *ngIf="role === 'Administrador'" routerLink="/pages/usuarios" class="sidenav">
+        <mat-icon mat-list-icon class="color">group</mat-icon>
+        <div mat-line class="color">Usuarios</div>
+      </mat-list-item>
+
+      <mat-list-item *ngIf="role === 'Administrador'" routerLink="/pages/productos" class="sidenav">
+        <mat-icon mat-list-icon class="color">collections_bookmark</mat-icon>
+        <div mat-line class="color">Productos</div>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/pages/vender" class="sidenav">
+        <mat-icon mat-list-icon class="color">currency_exchange</mat-icon>
+        <div mat-line class="color">Vender</div>
+      </mat-list-item>
+
+      <mat-list-item routerLink="/pages/historialventas" class="sidenav">
+        <mat-icon mat-list-icon class="color">edit_note</mat-icon>
+        <div mat-line class="color">Historial Ventas</div>
+      </mat-list-item>
+
+      <mat-list-item *ngIf="role === 'Administrador'" routerLink="/pages/reportes" class="sidenav">
+        <mat-icon mat-list-icon class="color">receipt</mat-icon>
+        <div mat-line class="color">Reportes</div>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div style="height: 90vh;">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

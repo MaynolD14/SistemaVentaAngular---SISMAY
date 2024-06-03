@@ -1,0 +1,108 @@
+﻿--INSERTAR ROLES
+insert into rol(descripcion,esActivo) values
+('Administrador',1),
+('Empleado',1)
+
+go
+
+--INSERTAR USUARIOS
+insert into usuario(nombreApellidos,correo,idRol,Clave,esActivo) values
+('Maynol Díaz','admin@example.com',1,'1234',1),
+('René Salvador','empleado@example.com',2,'1234',1)
+
+go
+--INSERTAR CATEGORIAS
+insert into Categoria(descripcion,esActivo) values ('Frutas y verduras',1)
+insert into Categoria(descripcion,esActivo) values ('Grano básico',1)
+insert into Categoria(descripcion,esActivo) values ('Desechables',1)
+insert into Categoria(descripcion,esActivo) values ('Lácteos',1)
+insert into Categoria(descripcion,esActivo) values ('Bebidas',1)
+insert into Categoria(descripcion,esActivo) values ('Medicamentos',1)
+
+go
+
+--INSERTAR PRODUCTOS
+
+-- Frutas y verduras
+insert into Producto(nombre,idCategoria,stock,precio,esActivo) values
+('Manzana',1,100,0.30,1),
+('Naranja',1,150,0.20,1),
+('Zanahoria',1,200,0.10,1),
+('Lechuga',1,100,0.50,1),
+('Tomate',1,150,0.25,1),
+('Plátano',1,100,0.15,1),
+('Pepino',1,120,0.20,1),
+('Pimiento',1,130,0.40,1),
+('Cebolla',1,110,0.10,1),
+('Ajo',1,100,0.05,1)
+
+-- Grano básico
+insert into Producto(nombre,idCategoria,stock,precio,esActivo) values
+('Arroz',2,300,1.00,1),
+('Frijoles',2,250,1.50,1),
+('Maíz',2,200,0.90,1),
+('Lentejas',2,180,1.20,1),
+('Quinoa',2,150,2.50,1),
+('Avena',2,200,0.80,1),
+('Trigo',2,150,1.10,1),
+('Cebada',2,130,1.00,1),
+('Centeno',2,120,1.20,1),
+('Garbanzos',2,140,1.30,1)
+
+-- Desechables
+insert into Producto(nombre,idCategoria,stock,precio,esActivo) values
+('Platos desechables',3,1000,0.80,1),
+('Cubiertos desechables',3,1000,0.85,1),
+('Vasos desechables',3,1000,0.60,1),
+('Servilletas',3,1500,0.80,1),
+('Pajitas',3,800,0.50,1),
+('Recipientes de poliestireno',3,500,0.10,1),
+('Ciento de cubiertos de madera',3,700,0.90,1),
+('Ciento de bolsas de plástico',3,2000,0.80,1),
+('Tenedores desechables',3,1000,0.04,1),
+('Cuchillos desechables',3,1000,0.04,1)
+
+-- Lácteos
+insert into Producto(nombre,idCategoria,stock,precio,esActivo) values
+('Leche',4,500,0.80,1),
+('Queso',4,400,1.20,1),
+('Yogur',4,450,0.60,1),
+('Mantequilla',4,300,1.50,1),
+('Crema',4,350,1.00,1),
+('Leche condensada',4,250,1.80,1),
+('Leche en polvo',4,220,2.00,1),
+('Queso fresco',4,410,1.10,1),
+('Queso mozzarella',4,320,1.30,1),
+('Helado',4,200,2.50,1)
+
+-- Bebidas
+insert into Producto(nombre,idCategoria,stock,precio,esActivo) values
+('Agua embotellada',5,1000,0.50,1),
+('Jugo de frutas',5,800,1.00,1),
+('Soda',5,700,0.70,1),
+('Café',5,600,2.00,1),
+('Té',5,500,1.50,1),
+('Jugo del valle',5,400,1.00,1),
+('Coca-Cola 2.5 litros',5,300,2.35,1),
+('Jugo de la granja grande',5,200,3.50,1),
+('Coca-Cola lata',5,800,0.80,1),
+('Bebida energética',5,600,2.00,1)
+
+-- Medicamentos
+insert into Producto(nombre,idCategoria,stock,precio,esActivo) values
+('Paracetamol',6,200,0.25,1),
+('Ibuprofeno',6,250,0.25,1),
+('Amoxicilina',6,150,1.50,1),
+('Ácido acetilsalicílico',6,180,0.10,1),
+('Loratadina',6,170,0.90,1),
+('Insulina',6,50,2.00,1),
+('Metformina',6,120,0.30,1),
+('Omeprazol',6,130,1.00,1),
+('Losartán',6,140,0.70,1),
+('Atorvastatina',6,110,0.80,1)
+
+
+go
+
+--INSERTAR NUMERO VENTA INICIAL
+insert into NumeroDocumento(ultimo_Numero) values(0)

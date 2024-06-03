@@ -1,0 +1,25 @@
+.loginCard {
+    max-width:328px !important;
+    margin:2em auto;
+    text-align:center;
+    max-height:600px;
+    border-radius: 10%;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  background-image: url('D:\zarco\Descargas\085_SistemaVentaAngularNet-master(1)\085_SistemaVentaAngularNet-master\SistemaVentaAngular\ClientApp\src\assets\FondoVerde.jpg');
+}
+
+.header {
+  text-align: center;
+}
+
+.full-width {
+  width: 80%;
+}
+
+
